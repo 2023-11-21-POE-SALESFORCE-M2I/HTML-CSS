@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Garde d'animaux</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo-page" src="img/logo.png" alt="">
+            <h1>Inscription de l'animal à faire garder</h1>
+        </header>
+        <form action="cible.php" method="GET"><!-- action="cible.php" : Définit l'URL où les données du formulaire seront envoyées une fois le formulaire soumis. / method="GET" : Indique la méthode HTTP utilisée pour envoyer les données du formulaire. Ici, GET transmet les données via l'URL. -->
+            <!--Champ text-->
+            <div><!-- <div> utilisée ici pour grouper chaque élément de formulaire et son étiquette (label) pour des raisons de mise en forme et d'organisation.-->
+                <!--Champ(input) Prénom(de type text) avec son étiquette(label)-->
+                <label for="name">Nom du propriétaire:</label><!--Attribut for du label (Associe l'étiquette au champ de formulaire ayant l'id correspondant. Améliore l'accessibilité en permettant aux utilisateurs de cliquer sur l'étiquette pour activer le champ associé.)-->
+                <input id="name" type="text" name="name"><!--id de l'input, Identifiant unique pour le champ de formulaire, utilisé pour le lier à son étiquette <label>) pour identifier le champ et son étiquette.-->
+
+                <!--Attribut name : Nom du champ qui sera utilisé pour transmettre les données sur le serveur.-->
+            </div>
+            <!--Champ text-->
+            <div>
+                <label for="owner-first-name">Prénom du propriétaire :</label>
+                <input id="owner-first-name" type="text" name="owner-first-name">
+            </div>
+            <!--Champ date-->
+            <div>
+                <label for="date-of-birth">Date de naissance du propriétaire :</label>
+                <input id="date-of-birth" type="date" name="date-of-birth">
+            </div>
+            <!--Liste déroulante-->
+            <div>
+                <label for="pet">Type d'animal à faire garder</label>
+                <select name="pet" id="pet"><!--Crée une liste déroulante avec name pour l'envoi des données et id pour l'association avec son étiquette.-->
+                    <option value="chien">Chien</option><!--Chaque option a une value, qui est la donnée envoyée si l'option est sélectionnée.-->
+                    <option value="chat">Chat</option>
+                    <option value="rongeur">Rongeur</option>
+                    <option value="poisson">Poisson</option>
+                    <option value="autre">Autre</option>
+                </select>
+            </div>
+            <!--Champ de texte multi-ligne-->
+            <div>
+                <label for="message">Si vous avez choisi "autre" précédemment, veuillez préciser de quel animal il s'agit :</label>
+                <textarea name="message" id="message" cols="100" rows="10"></textarea><!--cols et rows, Définit les dimensions du champ texte multi-ligne en termes de nombre de colonnes (largeur) et de lignes (hauteur).-->
+            </div>
+            <!--Champ mail-->
+            <div>
+                <label for="email">Adresse mail du propriétaire :</label>
+                <input id="email" type="email" name="email">
+            </div>
+            <!--Champ de téléphone-->
+            <div>
+                <label for="tel">Numéro de téléphone du propriétaire :</label>
+                <input id="tel" type="tel" name="tel">
+            </div>
+            <!--Champ de fichier-->
+            <div>
+                <label for="vaccine-file">Dernière page de vaccin de l'animal :</label>
+                <input id="vaccine-file" type="file" name="vaccine-file">
+            </div>
+            <!--Bouton envoyer-->
+            <div>
+                <input type="submit" value="Envoyer"><!-- Value="Envoyer" : Texte affiché sur le bouton de soumission du formulaire. Lorsque cliqué, le formulaire est soumis à l'URL spécifiée dans l'attribut action de la balise <form>. -->
+            </div>
+        </form>
+    </body>
+</html>
