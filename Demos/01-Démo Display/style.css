@@ -1,0 +1,19 @@
+.displayblock{
+    width:200px;
+    height:200px;
+    background-color:rgb(85, 10, 10);
+    border: 2px black solid;
+}
+.displayinline{
+    background-color:rgb(35, 35, 65);
+    border: 2px black solid;
+    display: inline;
+    color:white;
+}
+.displayinline-block{
+    width:200px;
+    height:200px;
+    background-color:rgb(69, 39, 69);
+    border: 2px black solid;
+    display: inline-block;
+}
